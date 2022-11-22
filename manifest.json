@@ -1,0 +1,19 @@
+{
+  "name": "First Extension",
+  "description": "My first Chrome Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_title": "Click to view a popup",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/NaverPay_BI.png",
+      "32": "/images/NaverPay_BI.png"
+    }
+  },
+  "options_page": "options.html"
+}
