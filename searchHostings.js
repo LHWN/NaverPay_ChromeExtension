@@ -40,7 +40,7 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[0],
     async: true, // 비동기 
     complete: function(data) {
-      console.log(data);
+      console.log(new Date());
       if(data.status == '200') {
         console.log('URL : ' + curURL + PROD_INFO_XML_URL[0]);
         console.log('[' + data.status + '] 카페24 호스팅사 일치');
@@ -103,6 +103,7 @@ getCurrentTab().then((data) => {
                                         url: curURL + PROD_INFO_XML_URL[6],
                                         async: true,
                                         complete: function(data) {
+                                          console.log(new Date());
                                           if(data.status == '200') {
                                             console.log('[' + data.status + '] 코드엠 호스팅사 일치');
                                             document.getElementById('hostings').innerText = HOSTINGS[6];

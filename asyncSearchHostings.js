@@ -43,9 +43,11 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[0],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[0] = true;
-        }
+      console.log("[" + HOSTINGS[0] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[0] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[0] + "' 입니다.";
+      }
     }
   })
 
@@ -54,9 +56,11 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[1],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[1] = true;
-        }
+      console.log("[" + HOSTINGS[1] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[1] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[1] + "' 입니다.";
+      }
     }
   })
 
@@ -65,9 +69,11 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[2],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[2] = true;
-        }
+      console.log("[" + HOSTINGS[2] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[2] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[2] + "' 입니다.";
+      }
     }
   })
 
@@ -76,9 +82,11 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[3],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[3] = true;
-        }
+      console.log("[" + HOSTINGS[3] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[3] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[3] + "' 입니다.";
+      }
     }
   })
 
@@ -87,23 +95,90 @@ getCurrentTab().then((data) => {
     url: curURL + PROD_INFO_XML_URL[4],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[4] = true;
-        }
+      console.log("[" + HOSTINGS[4] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[4] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[4] + "' 입니다.";
+      }
     }
   })
 
+  // 코드엠
   var ajax_codem = $.ajax({
     type: 'GET',
     url: curURL + PROD_INFO_XML_URL[6],
     async: true, // 비동기 
     complete: function(data) {
-        if(data.status == '200') {
-            result[6] = true;
-            document.getElementById('hostings').innerText = HOSTINGS[6];
-        }
+      console.log("[" + HOSTINGS[6] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[6] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[6] + "' 입니다.";
+      }
     }
   })
 
+  // 아임웹
+  var ajax_imweb = $.ajax({
+    type: 'GET',
+    url: curURL + PROD_INFO_XML_URL[7],
+    async: true, // 비동기 
+    complete: function(data) {
+      console.log("[" + HOSTINGS[7] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[7] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[7] + "' 입니다.";
+      }
+    }
+  })
+
+  // 위사
+  var ajax_wisa = $.ajax({
+    type: 'GET',
+    url: curURL + PROD_INFO_XML_URL[8],
+    async: true, // 비동기 
+    complete: function(data) {
+      console.log("[" + HOSTINGS[8] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[8] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[8] + "' 입니다.";
+      }
+    }
+  })
+
+  // 식스샵
+  var ajax_sixshop = $.ajax({
+    type: 'GET',
+    url: curURL + PROD_INFO_XML_URL[9],
+    async: true, // 비동기 
+    complete: function(data) {
+      console.log("[" + HOSTINGS[9] + "]" + "실행 시각 : " + new Date());
+      if(data.status == '200') {
+          result[9] = true;
+          document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[9] + "' 입니다.";
+      }
+    }
+  })
+
+  // 독립몰 (영카트)
+  var ajax_youngcarts = $.ajax({
+      type: 'GET',
+      url: curURL + PROD_INFO_XML_URL[10],
+      async: true, // 비동기 
+      complete: function(data) {
+        console.log("[" + HOSTINGS[10] + "]" + "실행 시각 : " + new Date());
+        if(data.status == '200') {
+            result[10] = true;
+            document.getElementById('hostings').innerText = "호스팅사는 '" + HOSTINGS[10] + "' 입니다.";
+        }
+      }
+  })
+
+  $.when(ajax_cafe24).then(function(data, textStatus, jqXHR) {
+  }, function() {
+    for (var i = 1; i < result.length; i++) {
+      console.log("# search Hostings Result : " + "[" + HOSTINGS[i] + "]" + result[i]);
+    }
+  })
+  
   
 })

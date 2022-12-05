@@ -1,0 +1,41 @@
+html {
+    min-height: 30em;
+    min-width: 20em;
+    font-family: 'NanumSquareNeo';
+}
+
+span.hostings {
+    /* margin-top: 2px; */
+    /* margin-left: 2px; */
+    padding: 0;
+    margin: 0;
+}
+
+div.rootComponent {
+    overflow: auto;
+    background-color: rgb(18, 21, 21);
+}
+
+div.headComponent {
+    height: 10em;
+    background-color: rgb(42, 48, 52);
+}
+
+div.bodyComponent {
+    padding: 10px 0;
+    margin: 0;
+    height: 20em;
+    /* background-color: rgb(18, 21, 21); */
+}
+
+div.sectionTitle {
+    color:rgb(242, 242, 242);
+    font-size: 12px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+
+div.accordion {
+    padding-left: 14px;
+    padding-right: 14px;
+}

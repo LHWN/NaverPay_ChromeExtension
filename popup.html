@@ -3,26 +3,91 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Pop up!</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="./css/font.css" rel="stylesheet">
+    <link href="./css/body.css" rel="stylesheet">
     <style>
-    html {
-      min-height: 30em;
-      min-width: 20em;
-      background-color: #424851;
-    }
+    
     </style>
 
     <script src="./lib/jquery-3.6.1.min.js"></script>  
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="asyncSearchHostings.js"></script>
+    <script src="searchButtonScript.js"></script>
 </head>
 <body>
-  <script src="popup.js"></script>
-  <script src="asyncSearchHostings.js"></script>
-  <!-- <script src="searchHostings.js"></script> -->
-<h2>
-  <span id="hostings">Searching...</span>
-</h2>
+  <div class="rootComponent">
+  <div class="headComponent">
+    <span id="hostings" class="hostings" style="color:rgb(242, 242, 242); font-size: 14px;">Searching...</span>
+  </div>
+
+  <div class="bodyComponent">
+    <div class="sectionTitle">
+      <span id="wcs">네이버공통유입스크립트</span>
+    </div>  
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Button Script
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+          <div class="accordion-body"></div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Naver Script
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            SubDomain
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+      
+    </div>
+  </div>
 </body>
 </html>
+
+
+<!-- 버튼 스크립트 추추 -->
+<!-- 
+  wcs 추출
+  가맹점 정보 조회 (id, 명, 호스팅사, 이능키...)
+  서브도메인 찾기
+
+  찜목록 링크
+
+  쿠키 생성여부
+  주문생성
+
+
+
+-->
