@@ -1,8 +1,10 @@
 chrome.runtime.onMessage.addListener((request, sender, sendRespone) => {
-  console.log(request);
-  console.log(sender);
-  console.log(sendRespone);
-  if(request.message === 'searchButtonScript') {
+  alert(request);
+  // console.log(request);
+  // console.log(sender);
+  // console.log(sendRespone);
+  if(request.result === 'SUCCESS') {
+    document.getElementById('buttonScript').innerText = request.message;
     sendRespone({
       message: 'SUCCESS'
     })
