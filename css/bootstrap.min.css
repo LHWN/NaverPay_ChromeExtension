@@ -3804,7 +3804,7 @@ textarea.form-control-lg {
 }
 .accordion-body {
 	font-size: 12px;
-	padding:1rem 1.25rem;
+	padding: 1rem 1rem 1rem 0;
     background-color: rgb(203,205,208);
 }
 .accordion-flush .accordion-collapse {
