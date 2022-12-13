@@ -3803,6 +3803,7 @@ textarea.form-control-lg {
 	border-bottom-left-radius:.25rem
 }
 .accordion-body {
+	font-size: 12px;
 	padding:1rem 1.25rem;
     background-color: rgb(203,205,208);
 }
