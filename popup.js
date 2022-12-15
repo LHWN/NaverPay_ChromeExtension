@@ -3,8 +3,6 @@ chrome.runtime.onMessage.addListener(
         var result = request.result;
         var message = request.message;
 
-        console.log(result.message);
-
         if(message === 'SUCCESS_BUTTON') {
             if(result.length > 0) {
                 // var result = request.result;
@@ -34,6 +32,19 @@ chrome.runtime.onMessage.addListener(
                 })
             } else {
                 document.getElementById('wcsScriptComponent').innerText = "Not imported";
+            }
+        } else if(message === 'SUCCESS_SUBDOMAIN') {
+            if(result.length > 0) {
+                result.forEach(element => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+
+                    const textnode = document.createTextNode(element);
+                    a.setAttribute('href', element);
+                    a.appendChild(textnode);
+                    li.appendChild(a);
+                    document.getElementById('subdomain').appendChild(li);
+                })
             }
         }
         sendResponse({ 

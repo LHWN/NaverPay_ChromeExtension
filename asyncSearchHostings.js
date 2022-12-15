@@ -173,10 +173,14 @@ getCurrentTab().then((data) => {
       }
   })
 
-  $.when(ajax_cafe24).then(function(data, textStatus, jqXHR) {
+  // 제대로 동작하는지 모르겠음 
+  // 원래 의도 : 호스팅사 다 돌고 없으면 '호스팅사 매칭 결과 없음' 출력
+  $.when(ajax_cafe24, ajax_gabia, ajax_godo).then(function(data, textStatus, jqXHR) {
   }, function() {
+    console.log("호스팅사 매칭 결과 없음" + new Date());
+    document.getElementById('hostings').innerText = "호스팅사 매칭 결과 없음";
     for (var i = 1; i < result.length; i++) {
-      console.log("# search Hostings Result : " + "[" + HOSTINGS[i] + "]" + result[i]);
+      // console.log("# search Hostings Result : " + "[" + HOSTINGS[i] + "]" + result[i]);
     }
   })
   
