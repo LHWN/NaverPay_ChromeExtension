@@ -40,12 +40,29 @@ chrome.runtime.onMessage.addListener(
                     const a = document.createElement('a');
 
                     const textnode = document.createTextNode(element);
-                    a.setAttribute('href', element);
+                    a.setAttribute('url', element);
+                    a.setAttribute('class', 'ctrlLink');
+                    a.setAttribute('target', '_blank');
+                    a.setAttribute('style', 'cursor: pointer;');
                     a.appendChild(textnode);
                     li.appendChild(a);
+
                     document.getElementById('subdomain').appendChild(li);
                 })
             }
+
+                $('.ctrlLink').on('click', function(event) {
+                    var ctrlpressed = (event.ctrlKey || event.metaKey);
+                    var url = $(this).attr('url');
+                    var tabplacement = 0;
+
+                    chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tab) {
+                        tabplacement += 1;
+                        var index = tab[0].index + tabplacement;
+                        chrome.tabs.create({ 'url': url, active: false, 'index': index });
+                    })
+                })
+            
         }
         sendResponse({ 
             message: "OK"
