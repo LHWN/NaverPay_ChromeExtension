@@ -63,8 +63,36 @@ chrome.runtime.onMessage.addListener(
                     })
                 })
             
+        } else if(message === 'SUCCESS_COOKIE') {
+            if(result != null) {
+                var tableHTML = '';
+
+                result.forEach(element => {
+                    tableHTML += '<tr><td>' + element.name + '</td><td>' + element.value + '</td></tr>'
+                })
+
+                document.getElementById('cookieTable').innerHTML = tableHTML;
+            }
         }
         sendResponse({ 
             message: "OK"
         });
 });
+
+// Production
+document.getElementById('prdZzimList').addEventListener('click', function() {
+    window.open('https://shopping.naver.com/my/keep-products');
+})
+
+document.getElementById('prdPayList').addEventListener('click', function() {
+    window.open('https://order.pay.naver.com/home');
+})
+
+// Sandbox
+document.getElementById('sandZzimList').addEventListener('click', function() {
+    window.open('http://test.shopping.naver.com/my/keep-products');
+})
+
+document.getElementById('sdbPayList').addEventListener('click', function() {
+    window.open('https://dev-order.pay.naver.com/home');
+})

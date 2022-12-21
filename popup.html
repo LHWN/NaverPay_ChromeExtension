@@ -9,32 +9,50 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <link href="./css/font.css" rel="stylesheet">
     <link href="./css/body.css" rel="stylesheet">
-    <style>
-    
-    </style>
 
     <script src="./lib/jquery-3.6.1.min.js"></script>  
     <script src="./lib/bootstrap.bundle.min.js"></script>
-    <script src="popup.js"></script>
-    <script src="asyncSearchHostings.js"></script>
 </head>
 <body>
   <div class="rootComponent">
   <div class="headComponent">
-    <span id="hostings" class="hostings" style="color:rgb(242, 242, 242); font-size: 14px;">Searching...</span>
+    <div>
+      <span id="hostings" class="hostings" style="color:rgb(242, 242, 242); font-size: 14px;">Searching...</span>
+    </div>
+    <hr>
+    <div class="linkButton">
+      <div class="production">
+        <div class="sectionTitle">
+          <span id="wcs">운영 환경</span>
+        </div>  
+        <div class="prdBtnComponent">
+          <button type="button" class="btn prdButton" id="prdZzimList">찜 목록</button>
+          <button type="button" class="btn prdButton" id="prdPayList">페이결제내역</button>
+          <button type="button" class="btn prdButton" id="prdPayList">페이센터</button>
+        </div>
+      </div>
+      <div class="sandbox">
+        <div class="sectionTitle">
+          <span id="wcs">개발 환경</span>
+        </div>  
+        <div class="sandboxBtnComponent">
+          <button type="button" class="btn sdbButton" id="sandZzimList">찜 목록</button>
+          <button type="button" class="btn sdbButton" id="sdbPayList">페이결제내역</button>
+          <button type="button" class="btn sdbButton" id="sdbPayList">페이센터</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="bodyComponent">
-    <div class="sectionTitle">
-      <span id="wcs">네이버공통유입스크립트</span>
-    </div>  
-
     <div class="accordion" id="accordionExample">
+      <div class="sectionTitle">
+        <span id="wcs">버튼 스크립트 찾기</span>
+      </div>  
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" id="searchButtonScript" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-dot" viewBox="0 0 50 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
               <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
             </svg>
             Search Button Script
@@ -45,9 +63,15 @@
         </div>
       </div>
 
+      <div class="sectionTitle">
+        <span id="wcs">네이버 공통 유입 스크립트 찾기</span>
+      </div>  
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" id="searchWcsScript" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+              <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+            </svg>
             Search Wcs Script
           </button>
         </h2>
@@ -56,9 +80,15 @@
         </div>
       </div>
 
+      <div class="sectionTitle">
+        <span id="wcs">서브도메인 찾기</span>
+      </div>  
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" id="searchSubdomain" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+              <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+            </svg>
             Search Subdomains
           </button>
         </h2>
@@ -68,6 +98,20 @@
       </div>
       
     </div>
+    <div class="siteCookie">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+
+        <tbody id="cookieTable"></tbody>
+        </tbody>
+      </table>
+    </div>
 
       
     </div>
@@ -75,6 +119,9 @@
   <script src="searchButtonScript.js"></script>
   <script src="searchWcsScript.js"></script>
   <script src="searchSubdomain.js"></script>
+  <script src="asyncSearchHostings.js"></script>
+  <script src="searchCookies.js"></script>
+  <script src="popup.js"></script>
 </body>
 </html>
 

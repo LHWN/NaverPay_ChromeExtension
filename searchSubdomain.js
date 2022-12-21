@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         var resultArr = [];
                         var i = 0;
 
+                        console.log(atags);
                         for (let index = 0; index < atags.length; index++) {
                             if(curURL != atags[index].hostname
-                                && atags[index].href != "") {
+                                && atags[index].href != ""
+                                && atags[index].host != "") {
                                     resultArr[i] = atags[index].href;
                                     i++;
                                     console.log(index + "sub : " + atags[index].href);

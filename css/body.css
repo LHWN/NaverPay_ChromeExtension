@@ -13,13 +13,41 @@ span.hostings {
     margin: 0;
 }
 
+.prdBtnComponent {
+    margin: 3px 0;
+}
+
+.sandboxBtnComponent {
+    margin: 3px 0;
+}
+
+.prdButton {
+	color:#fff;
+	background-color:rgb(119, 183, 144);
+	border-color: rgb(119, 183, 144);
+}
+
+.sdbButton {
+    color:#fff;
+    background-color: rgb(63, 71, 76);
+    border-color: rgb(63, 71, 76);
+}
+
+.production {
+    margin: 10px 0 0 10px;
+}
+
+.sandbox {
+    margin: 10px 0 0 10px;
+}
+
 div.rootComponent {
     overflow: auto;
     background-color: rgb(18, 21, 21);
 }
 
 div.headComponent {
-    height: 10em;
+    height: 11.5em;
     background-color: rgb(42, 48, 52);
 }
 
@@ -33,8 +61,8 @@ div.bodyComponent {
 div.sectionTitle {
     color:rgb(242, 242, 242);
     font-size: 12px;
-    padding-left: 16px;
-    padding-bottom: 10px;
+    /* padding-left: 16px; */
+    /* padding-bottom: 10px; */
 }
 
 div.accordion {
@@ -45,4 +73,27 @@ div.accordion {
 a.ctrlLink {
     text-decoration-line: none;
     color: black;
+}
+
+svg.bi-dot {
+    color: rgb(119, 183, 144);
+    font-size: 26px;
+}
+
+hr {
+    background-color: white;
+    height: 1px;
+    width: 95%;
+    opacity: .25;
+    border: 0;
+}
+
+div.siteCookie {
+    /* background-color: rgb(63,71,75); */
+    padding: 0 14px;
+}
+
+table.siteCookieTable {
+    border: 1;
+    border-color: #fff;
 }

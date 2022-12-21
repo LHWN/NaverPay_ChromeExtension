@@ -45,15 +45,15 @@ body {
 	-webkit-tap-highlight-color:transparent
 }
 hr {
-	margin:1rem 0;
+	/* margin:1rem 0; */
 	color:inherit;
 	background-color:currentColor;
 	border:0;
 	opacity:.25
 }
-hr:not([size]) {
+/* hr:not([size]) {
 	height:1px
-}
+} */
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
 	margin-top:0;
 	margin-bottom:.5rem;
@@ -1473,10 +1473,12 @@ progress {
 	box-shadow:inset 0 0 0 9999px var(--bs-table-accent-bg)
 }
 .table>tbody {
-	vertical-align:inherit
+	vertical-align:inherit;
+	font-size: 12px;
 }
 .table>thead {
-	vertical-align:bottom
+	vertical-align:bottom;
+	font-size: 12px;
 }
 .table>:not(:last-child)>:last-child>* {
 	border-bottom-color:currentColor
@@ -2356,7 +2358,7 @@ textarea.form-control-lg {
 	background-color:transparent;
 	border:1px solid transparent;
 	padding:.375rem .75rem;
-	font-size:1rem;
+	font-size:13px;
 	border-radius:.25rem;
 	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
@@ -2803,7 +2805,7 @@ textarea.form-control-lg {
 .btn-link {
 	font-weight:400;
 	color:#0d6efd;
-	text-decoration:underline
+	/* text-decoration:underline */
 }
 .btn-link:hover {
 	color:#0a58ca
@@ -3719,13 +3721,12 @@ textarea.form-control-lg {
 	align-items:center;
 	width:100%;
     height: 30px;
-	padding:1rem 1.25rem;
+	padding:1rem 5px;
 	font-size:0.9rem;
 	color:rgb(203,205,208);
 	text-align:left;
 	background-color:rgb(63,71,75);
 	border:0;
-	border-radius:0;
 	overflow-anchor:none;
 	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease
 }
@@ -3774,13 +3775,14 @@ textarea.form-control-lg {
 .accordion-item {
 	background-color: rgb(63,71,75);
 	border:1px solid rgba(0,0,0,.125);
-    margin: 10px;
+    margin: 10px 0;
 }
 .accordion-item:first-of-type {
 	border-top-left-radius:.25rem;
 	border-top-right-radius:.25rem;
 }
 .accordion-item:first-of-type .accordion-button {
+	/* padding: 0 0 0 5px; */
 	border-top-left-radius:calc(.25rem - 1px);
 	border-top-right-radius:calc(.25rem - 1px);
 }
@@ -3822,7 +3824,7 @@ textarea.form-control-lg {
 	border-bottom:0
 }
 .accordion-flush .accordion-item .accordion-button {
-	border-radius:0
+	border-radius:0 
 }
 .breadcrumb {
 	display:flex;
