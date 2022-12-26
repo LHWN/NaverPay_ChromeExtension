@@ -1,3 +1,5 @@
+import * as crawl from './searchShopping.js';
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         var result = request.result;
@@ -70,7 +72,7 @@ chrome.runtime.onMessage.addListener(
                 result.forEach(element => {
                     tableHTML += '<tr><td>' + element.name + '</td><td>' + element.value + '</td></tr>'
                 })
-
+                chrome.notifications.create('', data.options);
                 document.getElementById('cookieTable').innerHTML = tableHTML;
             }
         }
@@ -79,7 +81,15 @@ chrome.runtime.onMessage.addListener(
         });
 });
 
-// Production
+document.getElementById('buttonSearchShopping').addEventListener('click', function() {
+    var merchantName = document.getElementById('merchantName').value;
+    var httpRequest = new XMLHttpRequest();
+    const url = 'https://search.shopping.naver.com/search/all?query=' + merchantName;
+
+    crawl.search();
+})
+
+// Production 링크 버튼
 document.getElementById('prdZzimList').addEventListener('click', function() {
     window.open('https://shopping.naver.com/my/keep-products');
 })
@@ -88,11 +98,27 @@ document.getElementById('prdPayList').addEventListener('click', function() {
     window.open('https://order.pay.naver.com/home');
 })
 
-// Sandbox
+document.getElementById('prdPayCenter').addEventListener('click', function() {
+    window.open('https://admin.pay.naver.com/');
+})
+
+document.getElementById('prdShopping').addEventListener('click', function() {
+    window.open('https://search.shopping.naver.com/allmall');
+})
+
+document.getElementById('prdSearchAd').addEventListener('click', function() {
+    window.open('https://ad.search.naver.com/search.naver?where=ad');
+})
+
+// Sandbox 링크 버튼
 document.getElementById('sandZzimList').addEventListener('click', function() {
     window.open('http://test.shopping.naver.com/my/keep-products');
 })
 
 document.getElementById('sdbPayList').addEventListener('click', function() {
     window.open('https://dev-order.pay.naver.com/home');
+})
+
+document.getElementById('sdbPayCenter').addEventListener('click', function() {
+    window.open('https://alpha-admin.pay.naver.com');
 })

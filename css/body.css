@@ -1,6 +1,6 @@
 html {
     min-height: 30em;
-    min-width: 20em;
+    min-width: 30em;
     font-family: 'NanumSquareNeo';
 }
 
@@ -62,7 +62,7 @@ div.sectionTitle {
     color:rgb(242, 242, 242);
     font-size: 12px;
     /* padding-left: 16px; */
-    /* padding-bottom: 10px; */
+    /* padding-bottom: 2px; */
 }
 
 div.accordion {
@@ -93,7 +93,13 @@ div.siteCookie {
     padding: 0 14px;
 }
 
-table.siteCookieTable {
+table {
     border: 1;
     border-color: #fff;
+    margin-top: 8px;
+}
+
+div.searchShopping {
+    margin: 12px;
+    height: 100px;
 }

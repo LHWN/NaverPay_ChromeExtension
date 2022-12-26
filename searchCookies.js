@@ -6,18 +6,13 @@ chrome.tabs.query({ active: true, currentWindow: true },
                 var cookieData = document.cookie;
                 console.log(cookieData);
 
-                var cookieName = 'NA_CO=';
+                var cookieName = ['NA_CO', 'todayGoodsNo', 'NVADID'];
 
-                var cookieNameArr = ['NA_CO', 'todayGoodsNo', 'NVADID'];
-                var cookieValue = '';
-
-                var resultObj = {};
                 var result = [];
-                var startNACO = cookieData.indexOf(cookieName);
                 var index = 0;
 
                 console.log(cookieData);
-                cookieNameArr.forEach(element => {
+                cookieName.forEach(element => {
                     var start = cookieData.indexOf(element);
 
                     if(start != -1) {

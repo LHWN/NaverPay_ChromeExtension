@@ -2135,6 +2135,7 @@ textarea.form-control-lg {
 	transform:scale(.85) translateY(-.5rem) translateX(.15rem)
 }
 .input-group {
+	margin-top: 10px;
 	position:relative;
 	display:flex;
 	flex-wrap:wrap;

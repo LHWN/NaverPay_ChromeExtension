@@ -28,7 +28,9 @@
         <div class="prdBtnComponent">
           <button type="button" class="btn prdButton" id="prdZzimList">찜 목록</button>
           <button type="button" class="btn prdButton" id="prdPayList">페이결제내역</button>
-          <button type="button" class="btn prdButton" id="prdPayList">페이센터</button>
+          <button type="button" class="btn prdButton" id="prdPayCenter">페이센터</button>
+          <button type="button" class="btn prdButton" id="prdShopping">네이버쇼핑</button>
+          <button type="button" class="btn prdButton" id="prdSearchAd">검색광고</button>
         </div>
       </div>
       <div class="sandbox">
@@ -38,7 +40,7 @@
         <div class="sandboxBtnComponent">
           <button type="button" class="btn sdbButton" id="sandZzimList">찜 목록</button>
           <button type="button" class="btn sdbButton" id="sdbPayList">페이결제내역</button>
-          <button type="button" class="btn sdbButton" id="sdbPayList">페이센터</button>
+          <button type="button" class="btn sdbButton" id="sdbPayCenter">페이센터</button>
         </div>
       </div>
     </div>
@@ -99,10 +101,12 @@
       
     </div>
     <div class="siteCookie">
+      <div class="sectionTitle">
+        <span>쿠키 조회</span>
+      </div>  
       <table class="table table-dark table-hover">
         <thead>
           <tr>
-            <!-- <th scope="col">#</th> -->
             <th scope="col">Name</th>
             <th scope="col">Value</th>
           </tr>
@@ -112,7 +116,17 @@
         </tbody>
       </table>
     </div>
-
+    
+    <div class="searchShopping">
+      <div class="sectionTitle">
+        <span>쇼핑 조회</span>
+      </div>  
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="merchantName" placeholder="Merchant Name">
+        <input type="text" class="form-control" id="merchantURL" placeholder="Merchant URL">
+        <button class="btn btn-outline-secondary" type="button" id="buttonSearchShopping">Button</button>
+      </div>
+    </div>
       
     </div>
   </div>
@@ -121,7 +135,7 @@
   <script src="searchSubdomain.js"></script>
   <script src="asyncSearchHostings.js"></script>
   <script src="searchCookies.js"></script>
-  <script src="popup.js"></script>
+  <script type="module" src="popup.js"></script>
 </body>
 </html>
 
