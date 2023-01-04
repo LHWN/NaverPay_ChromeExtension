@@ -83,10 +83,11 @@ chrome.runtime.onMessage.addListener(
 
 document.getElementById('buttonSearchShopping').addEventListener('click', function() {
     var merchantName = document.getElementById('merchantName').value;
+    var merchantUrl = document.getElementById('merchantURL').value;
     var httpRequest = new XMLHttpRequest();
     const url = 'https://search.shopping.naver.com/search/all?query=' + merchantName;
 
-    crawl.search();
+    crawl.search(merchantName, merchantUrl, url);
 })
 
 // Production 링크 버튼
