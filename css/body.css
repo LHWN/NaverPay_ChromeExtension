@@ -103,3 +103,8 @@ div.searchShopping {
     margin: 12px;
     height: 100px;
 }
+
+div#resultSection {
+    background-color: aliceblue;
+    display: none;
+}
